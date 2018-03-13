@@ -36,7 +36,7 @@ would make sure it is in the right final position anyways, hence our code works 
 without anything new added.
  *
  *****************************************************/
-
+import java.util.Random;
 public class QuickSort
 {
     //--------------v  HELPER METHODS  v--------------
@@ -89,7 +89,7 @@ public class QuickSort
 	
 	if (left<right){
 	    int pvtPos = partition(left,right,right,arr);
-	    printArr(arr);
+	    //printArr(arr);
 	    qsortH(arr,left,pvtPos-1);
 	    qsortH(arr,pvtPos+1,right);
 
@@ -115,6 +115,51 @@ public class QuickSort
 
     }
     //you may need a helper method...
+
+
+    public static int partitionR( int a, int b, int[] arr ) {
+	  
+	Random r = new Random();
+	int pvtPoint = r.nextInt((b - a) + a + 1);
+	int pvtElm = arr[pvtPoint];
+	  
+	swap( pvtPoint , b , arr );
+	  
+	int pos = a;
+	for (int i = a ; i < b ; i++) {
+	    if (arr[i] <= pvtElm) {
+		swap( i , pos , arr );
+		pos++;
+	    }
+	}
+	  
+	swap( pos , b , arr );
+	return pos;
+	  
+    }
+  
+    public static void qsortRH( int left, int right, int[] arr ) {
+	  
+	if (left < right) {
+	    int pvtPoint = partitionR( left , right , arr );
+	    qsortRH( left , pvtPoint - 1 , arr );
+	    qsortRH( pvtPoint + 1 , right , arr );
+	}
+		  
+    }
+    //--------------^  HELPER METHODS  ^--------------
+
+
+
+  /*****************************************************
+   * void qsort(int[])
+   * @param d -- array of ints to be sorted in place
+   *****************************************************/
+  public static void qsortR( int[] d ) {
+	  
+	  qsortRH( 0 , d.length - 1 , d );
+	  
+  }
 
 
     //main method for testing
