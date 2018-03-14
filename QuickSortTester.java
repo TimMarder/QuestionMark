@@ -3,6 +3,7 @@ public class QuickSortTester{
     
     public static void main(String[] args){
 
+
 	//testing mechanism: uses right index as the pvtPos on unsorted array
 
 	int sizeURS = 1; //U = unsorted, RS = rightside pvt
@@ -13,21 +14,20 @@ public class QuickSortTester{
 
 	    int[] tester =  QuickSort.buildArray(sizeURS,sizeURS*10);
 
-	    while(counter<10){
+	    while(counter<1000){
 		long startTime = System.nanoTime();		
 		QuickSort.qsort(tester);
 		long endTime = System.nanoTime() - startTime;
 		total += endTime;
 		counter++;	      
 	    }
-	    System.out.println( sizeURS + " ," + (total/10));
+	    System.out.println( sizeURS + " ," + (total/1000));
 	    
 	    sizeURS++;
 
-
 	}
-	System.out.println("==========BREAK===========");
-	///////////////////////////////////////////////////////////////////////
+		//System.out.println("==========BREAK===========");
+	//////////////////////////////////////////////////////////////////////
 
 	//testing mechanism: uses right index as the pvtPos on sorted ascending array
 
@@ -52,6 +52,9 @@ public class QuickSortTester{
 
 
 	}
+
+
+	
 	System.out.println("==========BREAK===========");
 	///////////////////////////////////////////////////////////////////////
 
@@ -79,8 +82,12 @@ public class QuickSortTester{
 
 
 	}
+
+
+
 	System.out.println("==========BREAK===========");
 	///////////////////////////////////////////////////////////////////////
+
 
 	//testing mechanism: uses random index as the pvtPos on unsorted array
 	int sizeUR = 1; //U = unsorted,  R = random Pvt
@@ -110,9 +117,11 @@ public class QuickSortTester{
 
 
 	}
+
 	System.out.println("==========BREAK===========");
 
 	///////////////////////////////////////////////////////////////////////
+
 
 	//testing mechanism: uses random index as the pvtPos on sorted ascending arr
 	int sizeAR = 1;// A = ascending, R = random Pvt
@@ -137,12 +146,16 @@ public class QuickSortTester{
 
 
 	}
+	
+
+
 
 	System.out.println("==========BREAK===========");
 	///////////////////////////////////////////////////////////////////////
 
+	
 	//testing mechanism: uses random index as the pvtPos on sorted descending arr
-	int sizeDR = 1;// A = descending, R = random Pvt
+	int sizeDR = 1;// D = descending, R = random Pvt
 	while(sizeDR<=100){
 	    long time = 0;
 	    int counter = 0;
@@ -167,7 +180,6 @@ public class QuickSortTester{
 
 	System.out.println("==========BREAK===========");
 	///////////////////////////////////////////////////////////////////////
-
 
 
 	
