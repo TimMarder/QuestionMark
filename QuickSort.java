@@ -72,6 +72,29 @@ public class QuickSort
 	    retArr[i] = (int)( maxVal * Math.random() );
 	return retArr;
     }
+
+    //returns array sorted in ascending order
+    public static int[] buildSortedAscArr(int size){
+	int[] rtrArr = new int[size];
+	for(int i =0; i<size; i++){
+	    rtrArr[i] = i;
+	}
+	return rtrArr;
+    }
+
+    //returns array sorted in descending order
+    public static int[] buildSortedDescArr(int size){
+	int[] rtrArr = new int[size];
+	for(int i =0; i<size; i++){
+	    rtrArr[i] = size-i;
+	}
+	return rtrArr;
+    }
+
+    
+
+
+    
     //--------------^  HELPER METHODS  ^--------------
 
 

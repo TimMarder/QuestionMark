@@ -3,46 +3,93 @@ public class QuickSortTester{
     
     public static void main(String[] args){
 
-	//testing mechanism: uses right index as the pvtPos
+	//testing mechanism: uses right index as the pvtPos on unsorted array
 
-	int size = 1;
-	while(size<=100){
+	int sizeURS = 1; //U = unsorted, RS = rightside pvt
+	while(sizeURS<=100){
 	    long time = 0;
 	    int counter = 0;
 	    long total = 0;
 
-	    int[] tester =  QuickSort.buildArray(size,size*10);
+	    int[] tester =  QuickSort.buildArray(sizeURS,sizeURS*10);
 
 	    while(counter<10){
-		long startTime = System.nanoTime();
-
-		
+		long startTime = System.nanoTime();		
 		QuickSort.qsort(tester);
-
 		long endTime = System.nanoTime() - startTime;
-
 		total += endTime;
-		counter++;
-	      
+		counter++;	      
 	    }
-
-	    System.out.println( size + " ," + (total/10));
+	    System.out.println( sizeURS + " ," + (total/10));
 	    
-	    size++;
+	    sizeURS++;
 
 
 	}
+	System.out.println("==========BREAK===========");
+	///////////////////////////////////////////////////////////////////////
 
+	//testing mechanism: uses right index as the pvtPos on sorted ascending array
 
-	//testing mechanism: uses right index as the pvtPos
-
-	int sizeR = 1;
-	while(sizeR<=100){
+	int sizeARS = 1; //A = sorted ascending, RS = rightside pvt
+	while(sizeARS<=100){
 	    long time = 0;
 	    int counter = 0;
 	    long total = 0;
 
-	    int[] tester =  QuickSort.buildArray(size,size*10);
+	    int[] tester =  QuickSort.buildSortedAscArr(sizeARS);
+
+	    while(counter<1000){
+		long startTime = System.nanoTime();		
+		QuickSort.qsort(tester);
+		long endTime = System.nanoTime() - startTime;
+		total += endTime;
+		counter++;	      
+	    }
+	    System.out.println( sizeARS + " ," + (total/1000));
+	    
+	    sizeARS++;
+
+
+	}
+	System.out.println("==========BREAK===========");
+	///////////////////////////////////////////////////////////////////////
+
+
+	//testing mechanism: uses right index as the pvtPos on sorted descending array
+
+	int sizeDRS = 1; //D = sorted descending, RS = rightside pvt
+	while(sizeDRS<=100){
+	    long time = 0;
+	    int counter = 0;
+	    long total = 0;
+
+	    int[] tester =  QuickSort.buildSortedDescArr(sizeDRS);
+
+	    while(counter<1000){
+		long startTime = System.nanoTime();		
+		QuickSort.qsort(tester);
+		long endTime = System.nanoTime() - startTime;
+		total += endTime;
+		counter++;	      
+	    }
+	    System.out.println( sizeDRS + " ," + (total/1000));
+	    
+	    sizeDRS++;
+
+
+	}
+	System.out.println("==========BREAK===========");
+	///////////////////////////////////////////////////////////////////////
+
+	//testing mechanism: uses random index as the pvtPos on unsorted array
+	int sizeUR = 1; //U = unsorted,  R = random Pvt
+	while(sizeUR<=100){
+	    long time = 0;
+	    int counter = 0;
+	    long total = 0;
+
+	    int[] tester =  QuickSort.buildArray(sizeUR,sizeUR*10);
 
 	    while(counter<1000){
 		long startTime = System.nanoTime();
@@ -57,13 +104,74 @@ public class QuickSortTester{
 	      
 	    }
 
-	    System.out.println( sizeR + " ," + (total/1000));
+	    System.out.println( sizeUR + " ," + (total/1000));
 	    
-	    sizeR++;
+	    sizeUR++;
 
 
 	}
-    }
+	System.out.println("==========BREAK===========");
+
+	///////////////////////////////////////////////////////////////////////
+
+	//testing mechanism: uses random index as the pvtPos on sorted ascending arr
+	int sizeAR = 1;// A = ascending, R = random Pvt
+	while(sizeAR<=100){
+	    long time = 0;
+	    int counter = 0;
+	    long total = 0;
+
+	    int[] tester =  QuickSort.buildSortedAscArr(sizeAR);
+
+	    while(counter<1000){
+		long startTime = System.nanoTime();		
+		QuickSort.qsortR(tester);
+		long endTime = System.nanoTime() - startTime;
+		total += endTime;
+		counter++;	      
+	    }
+
+	    System.out.println( sizeAR + " ," + (total/1000));
+	    
+	    sizeAR++;
+
+
+	}
+
+	System.out.println("==========BREAK===========");
+	///////////////////////////////////////////////////////////////////////
+
+	//testing mechanism: uses random index as the pvtPos on sorted descending arr
+	int sizeDR = 1;// A = descending, R = random Pvt
+	while(sizeDR<=100){
+	    long time = 0;
+	    int counter = 0;
+	    long total = 0;
+
+	    int[] tester =  QuickSort.buildSortedDescArr(sizeDR);
+
+	    while(counter<1000){
+		long startTime = System.nanoTime();		
+		QuickSort.qsortR(tester);
+		long endTime = System.nanoTime() - startTime;
+		total += endTime;
+		counter++;	      
+	    }
+
+	    System.out.println( sizeDR + " ," + (total/1000));
+	    
+	    sizeDR++;
+
+
+	}
+
+	System.out.println("==========BREAK===========");
+	///////////////////////////////////////////////////////////////////////
+
+
+
+	
+    }//END MAIN METHOD
 
 
 }
