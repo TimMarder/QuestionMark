@@ -4,52 +4,13 @@ public class QuickSortTester{
 
     
     public static void main(String[] args){
-	/***
-   long timeEnd;
-    long timeStart;
-    int ARRAY_SIZE = 1000;
-    int target;
-    int[][] array;
-    System.out.println("Working...");
-    String loadingBar;
-
-    try(FileWriter fw = new FileWriter(filename, true);
-          BufferedWriter bw = new BufferedWriter(fw);
-          PrintWriter out = new PrintWriter(bw)) {
-        out.println( "TRIAL,ARRAY_SIZE,TIME");
-      } catch (IOException e) {
-        e.printStackTrace();
-      }
-    for(int trial = 0; trial < 100; trial++) {
-      // RUN TESTS 
-      ARRAY_SIZE += 10;
-      array = populate(ARRAY_SIZE);
-      //start timer
-      timeStart = System.currentTimeMillis();
-      //start testing
-      for(int i = 0; i < 100000; i++) {
-        target = (int) (Math.random() * 5000.0);
-        MatrixFinder.locateCoord(array, target);
-      }
-      timeEnd = System.currentTimeMillis();
-
-      // LOG TIME TO CSV
-      try(FileWriter fw = new FileWriter(filename, true);
-          BufferedWriter bw = new BufferedWriter(fw);
-          PrintWriter out = new PrintWriter(bw)) {
-        out.println(trial + "," + ARRAY_SIZE + "," + (timeEnd - timeStart));
-      } catch (IOException e) {
-        e.printStackTrace();
-      }
-***/
-
 
 	
 	//testing mechanism: uses right index as the pvtPos on unsorted array
 	try(FileWriter fw = new FileWriter("UnsortedRightPVT.csv", true);
 	    BufferedWriter bw = new BufferedWriter(fw);
 	    PrintWriter out = new PrintWriter(bw)) {
-	    out.println( "TRIAL,ARRAY_SIZE,TIME");
+	    out.println( "TRIAL,TIME");
 	} catch (IOException e) {
 	    e.printStackTrace();
 	}
@@ -73,7 +34,7 @@ public class QuickSortTester{
 	    try(FileWriter fw = new FileWriter("UnsortedRightPVT.csv", true);
 		BufferedWriter bw = new BufferedWriter(fw);
 		PrintWriter out = new PrintWriter(bw)) {
-		out.println(sizeURS + "," + total);
+		out.println(sizeURS + "," + (total/1000));
 	    } catch (IOException e) {
 		e.printStackTrace();
 	    }
@@ -85,7 +46,13 @@ public class QuickSortTester{
 	//////////////////////////////////////////////////////////////////////
 
 	//testing mechanism: uses right index as the pvtPos on sorted ascending array
-
+	try(FileWriter fw = new FileWriter("AscendingRightPVT.csv", true);
+	    BufferedWriter bw = new BufferedWriter(fw);
+	    PrintWriter out = new PrintWriter(bw)) {
+	    out.println( "TRIAL,TIME");
+	} catch (IOException e) {
+	    e.printStackTrace();
+	}
 	int sizeARS = 1; //A = sorted ascending, RS = rightside pvt
 	while(sizeARS<=100){
 	    long time = 0;
@@ -102,7 +69,15 @@ public class QuickSortTester{
 		counter++;	      
 	    }
 	    System.out.println( sizeARS + " ," + (total/1000));
-	    
+
+	    try(FileWriter fw = new FileWriter("AscendingRightPVT.csv", true);
+		BufferedWriter bw = new BufferedWriter(fw);
+		PrintWriter out = new PrintWriter(bw)) {
+		out.println(sizeARS + "," + (total/1000));
+	    } catch (IOException e) {
+		e.printStackTrace();
+	    }
+	     
 	    sizeARS++;
 
 
@@ -115,7 +90,13 @@ public class QuickSortTester{
 
 
 	//testing mechanism: uses right index as the pvtPos on sorted descending array
-
+	try(FileWriter fw = new FileWriter("DescendingRightPVT.csv", true);
+	    BufferedWriter bw = new BufferedWriter(fw);
+	    PrintWriter out = new PrintWriter(bw)) {
+	    out.println( "TRIAL,TIME");
+	} catch (IOException e) {
+	    e.printStackTrace();
+	}
 	int sizeDRS = 1; //D = sorted descending, RS = rightside pvt
 	while(sizeDRS<=100){
 	    long time = 0;
@@ -132,7 +113,15 @@ public class QuickSortTester{
 		counter++;	      
 	    }
 	    System.out.println( sizeDRS + " ," + (total/1000));
-	    
+
+	    try(FileWriter fw = new FileWriter("DescendingRightPVT.csv", true);
+		BufferedWriter bw = new BufferedWriter(fw);
+		PrintWriter out = new PrintWriter(bw)) {
+		out.println(sizeDRS + "," + (total/1000));
+	    } catch (IOException e) {
+		e.printStackTrace();
+	    }
+
 	    sizeDRS++;
 
 
@@ -144,7 +133,14 @@ public class QuickSortTester{
 	///////////////////////////////////////////////////////////////////////
 
 
-	//testing mechanism: uses random index as the pvtPos on unsorted array
+	//testing mechanism: uses random index as the pvtPos on unsorted array\
+	try(FileWriter fw = new FileWriter("UnsortedRandomPVT.csv", true);
+	    BufferedWriter bw = new BufferedWriter(fw);
+	    PrintWriter out = new PrintWriter(bw)) {
+	    out.println( "TRIAL,TIME");
+	} catch (IOException e) {
+	    e.printStackTrace();
+	}
 	int sizeUR = 1; //U = unsorted,  R = random Pvt
 	while(sizeUR<=100){
 	    long time = 0;
@@ -167,6 +163,15 @@ public class QuickSortTester{
 	    }
 
 	    System.out.println( sizeUR + " ," + (total/1000));
+
+	    try(FileWriter fw = new FileWriter("UnsortedRandomPVT.csv", true);
+		BufferedWriter bw = new BufferedWriter(fw);
+		PrintWriter out = new PrintWriter(bw)) {
+		out.println(sizeUR + "," + (total/1000));
+	    } catch (IOException e) {
+		e.printStackTrace();
+	    }
+
 	    
 	    sizeUR++;
 
@@ -179,6 +184,13 @@ public class QuickSortTester{
 
 
 	//testing mechanism: uses random index as the pvtPos on sorted ascending arr
+	try(FileWriter fw = new FileWriter("AscendingRandomPVT.csv", true);
+	    BufferedWriter bw = new BufferedWriter(fw);
+	    PrintWriter out = new PrintWriter(bw)) {
+	    out.println( "TRIAL,TIME");
+	} catch (IOException e) {
+	    e.printStackTrace();
+	}
 	int sizeAR = 1;// A = ascending, R = random Pvt
 	while(sizeAR<=100){
 	    long time = 0;
@@ -196,6 +208,15 @@ public class QuickSortTester{
 	    }
 
 	    System.out.println( sizeAR + " ," + (total/1000));
+
+	    try(FileWriter fw = new FileWriter("AscendingRandomPVT.csv", true);
+		BufferedWriter bw = new BufferedWriter(fw);
+		PrintWriter out = new PrintWriter(bw)) {
+		out.println(sizeAR + "," + (total/1000));
+	    } catch (IOException e) {
+		e.printStackTrace();
+	    }
+
 	    
 	    sizeAR++;
 
@@ -210,6 +231,13 @@ public class QuickSortTester{
 
 	
 	//testing mechanism: uses random index as the pvtPos on sorted descending arr
+	try(FileWriter fw = new FileWriter("DescendingRandomPVT.csv", true);
+	    BufferedWriter bw = new BufferedWriter(fw);
+	    PrintWriter out = new PrintWriter(bw)) {
+	    out.println( "TRIAL,TIME");
+	} catch (IOException e) {
+	    e.printStackTrace();
+	}
 	int sizeDR = 1;// D = descending, R = random Pvt
 	while(sizeDR<=100){
 	    long time = 0;
@@ -227,6 +255,15 @@ public class QuickSortTester{
 	    }
 
 	    System.out.println( sizeDR + " ," + (total/1000));
+
+	    try(FileWriter fw = new FileWriter("DescendingRandomPVT.csv", true);
+		BufferedWriter bw = new BufferedWriter(fw);
+		PrintWriter out = new PrintWriter(bw)) {
+		out.println(sizeDR + "," + (total/1000));
+	    } catch (IOException e) {
+		e.printStackTrace();
+	    }
+
 	    
 	    sizeDR++;
 
