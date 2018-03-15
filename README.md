@@ -34,3 +34,4 @@ For all our tests when starting on a random pvtPos, the runtime was significantl
 
 Some differences we noticed in our graphs were occasional spikes in our graphs. We cannot completely explain this. However, one reason may be due to our processing system and its slight variations in efficiency. Another speculation is the random pivots were coincidentally randomly choosen such that the sorting time was longer relative to the trend it should have followed.
 
+A next step would be to test QuickSort using a more centered pivot and compare it to the random pivot.
