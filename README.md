@@ -17,6 +17,8 @@ On arrays with sizes that increase up to 100, run 1000 trials on each size, test
 
 ## Results
 
+![](/chart.png)
+
 When the array is unsorted, having the pvtPos on the right vs. having a random pvtPos, both resulted in similar runtimes. However, for both variations of sorted arrays, having the pvtPos on the right resulted in significantly faster runtimes than starting at a random pvtPos.
 
 
