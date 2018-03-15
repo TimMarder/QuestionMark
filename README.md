@@ -3,7 +3,7 @@
 
 ## Hypothesis
 
-**Worst Case:** O(logn²)
+**Worst Case:** O(n²)
 
 **Average Case:** O(nlogn)
 
