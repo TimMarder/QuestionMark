@@ -2,8 +2,12 @@
 ## :fire: Tim Marder :fire: Brandon Chung :fire: Bo Hui Lu :fire:
 
 ## Hypothesis
-We think that because it has a runtime of O(n), the time it takes for the sort to happen should increase in a linear fashion for all different cases. However, the arrays that were sorted in descending order probably will take longer than usual, because it's the worst case scenario.
 
+**Worst Case:** O(logn²)
+**Average Case:** O(nlogn)
+**Best Case:** O(nlogn)
+
+//Note: Add Explanations
 
 ## Background
 
@@ -16,6 +20,8 @@ On arrays with sizes that increase up to 100, run 1000 trials on each size, test
 
 
 ## Results
+
+//Note: Add explanation
 
 ![](chart.png)
 
