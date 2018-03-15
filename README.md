@@ -1,5 +1,5 @@
-## Team QuestionMark
-# :fire: Tim Marder :fire: Brandon Chung :fire: Bo Hui Lu :fire:
+# Team QuestionMark
+## :fire: Tim Marder :fire: Brandon Chung :fire: Bo Hui Lu :fire:
 
 ## Hypothesis
 We think that because it has a runtime of O(n), the time it takes for the sort to happen should increase in a linear fashion for all different cases. However, the arrays that were sorted in descending order probably will take longer than usual, because it's the worst case scenario.
@@ -17,7 +17,7 @@ On arrays with sizes that increase up to 100, run 1000 trials on each size, test
 
 ## Results
 
-![](/chart.png)
+![](chart.png)
 
 When the array is unsorted, having the pvtPos on the right vs. having a random pvtPos, both resulted in similar runtimes. However, for both variations of sorted arrays, having the pvtPos on the right resulted in significantly faster runtimes than starting at a random pvtPos.
 
