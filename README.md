@@ -1,5 +1,5 @@
 # Team QuestionMark
-## :fire: Tim Marder :fire: Brandon Chung :fire: Bo Hui Lu :fire:
+## :fire: Brandon Chung :fire: Tim Marder :fire: Bo Hui Lu :fire:
 
 ## Hypothesis
 
