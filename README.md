@@ -4,7 +4,9 @@
 ## Hypothesis
 
 **Worst Case:** O(logn²)
+
 **Average Case:** O(nlogn)
+
 **Best Case:** O(nlogn)
 
 //Note: Add Explanations
