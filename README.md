@@ -1,5 +1,5 @@
-# QuestionMark
-Team QuestionMark -- Tim Marder, Brandon Chong, Bo Hui Lu
+## Team QuestionMark
+# :fire: Tim Marder :fire: Brandon Chung :fire: Bo Hui Lu :fire:
 
 ## Hypothesis
 We think that because it has a runtime of O(n), the time it takes for the sort to happen should increase in a linear fashion for all different cases. However, the arrays that were sorted in descending order probably will take longer than usual, because it's the worst case scenario.
