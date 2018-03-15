@@ -1,5 +1,5 @@
 # Team QuestionMark
-## :fire: Brandon Chung :fire: Tim Marder :fire: Bo Hui Lu :fire:
+## :fire: Brandon Chong :fire: Tim Marder :fire: Bo Hui Lu :fire:
 
 ## Hypothesis
 
@@ -21,8 +21,6 @@ On arrays with sizes that increase up to 100, run 1000 trials on each size, test
 
 
 ## Results
-
-//Note: Add explanation
 
 ![](newchart.png)
 
