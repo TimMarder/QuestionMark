@@ -25,7 +25,7 @@ On arrays with sizes that increase up to 100, run 1000 trials on each size, test
 
 //Note: Add explanation
 
-![](chart.png)
+![](newchart.png)
 
 Click [HERE](https://docs.google.com/spreadsheets/d/1q22Ehk9i-vj1uPWFPUR6ZZH4ooD-bB5hUb8s-f-cKGY/edit?usp=sharing) to view our raw data.
 
