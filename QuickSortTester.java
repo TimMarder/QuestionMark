@@ -14,7 +14,7 @@ public class QuickSortTester{
 	} catch (IOException e) {
 	    e.printStackTrace();
 	}
-	int sizeURS = 1; //U = unsorted, RS = rightside pvt
+	int sizeURS = 10; //U = unsorted, RS = rightside pvt
 	while(sizeURS<=1000){
 	    long time = 0;
 	    int counter = 0;
@@ -53,7 +53,7 @@ public class QuickSortTester{
 	} catch (IOException e) {
 	    e.printStackTrace();
 	}
-	int sizeARS = 1; //A = sorted ascending, RS = rightside pvt
+	int sizeARS = 10; //A = sorted ascending, RS = rightside pvt
 	while(sizeARS<=1000){
 	    long time = 0;
 	    int counter = 0;
@@ -97,7 +97,7 @@ public class QuickSortTester{
 	} catch (IOException e) {
 	    e.printStackTrace();
 	}
-	int sizeDRS = 1; //D = sorted descending, RS = rightside pvt
+	int sizeDRS = 10; //D = sorted descending, RS = rightside pvt
 	while(sizeDRS<=1000){
 	    long time = 0;
 	    int counter = 0;
@@ -141,7 +141,7 @@ public class QuickSortTester{
 	} catch (IOException e) {
 	    e.printStackTrace();
 	}
-	int sizeUR = 1; //U = unsorted,  R = random Pvt
+	int sizeUR = 10; //U = unsorted,  R = random Pvt
 	while(sizeUR<=1000){
 	    long time = 0;
 	    int counter = 0;
@@ -191,7 +191,7 @@ public class QuickSortTester{
 	} catch (IOException e) {
 	    e.printStackTrace();
 	}
-	int sizeAR = 1;// A = ascending, R = random Pvt
+	int sizeAR = 10;// A = ascending, R = random Pvt
 	while(sizeAR<=1000){
 	    long time = 0;
 	    int counter = 0;
@@ -238,7 +238,7 @@ public class QuickSortTester{
 	} catch (IOException e) {
 	    e.printStackTrace();
 	}
-	int sizeDR = 1;// D = descending, R = random Pvt
+	int sizeDR = 10;// D = descending, R = random Pvt
 	while(sizeDR<=1000){
 	    long time = 0;
 	    int counter = 0;
